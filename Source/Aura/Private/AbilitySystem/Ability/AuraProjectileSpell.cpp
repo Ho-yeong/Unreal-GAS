@@ -16,7 +16,14 @@ void UAuraProjectileSpell::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 	
 	// UKismetSystemLibrary::PrintString(this, FString("ActivateAbility (C++)"), true, true, FLinearColor::Yellow, 3.f);
 
-	const bool bIsServer = HasAuthority(&ActivationInfo);
+
+
+}
+
+void UAuraProjectileSpell::SpawnProjectile()
+{
+	
+	const bool bIsServer = GetAvatarActorFromActorInfo()->HasAuthority();
 	
 	if (!bIsServer) return;
 	
@@ -40,5 +47,4 @@ void UAuraProjectileSpell::ActivateAbility(const FGameplayAbilitySpecHandle Hand
 		
 		Projectile->FinishSpawning(SpawnTransform);
 	}
-
 }
