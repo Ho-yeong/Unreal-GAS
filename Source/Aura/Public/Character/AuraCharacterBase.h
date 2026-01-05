@@ -24,6 +24,11 @@ public:
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 
 	UAttributeSet* GetAttributeSet() const { return AttributeSet; };
+	
+	UPROPERTY(EditAnywhere, Category = "Combat")
+	TArray<FTaggedMontage> AttackMontages;
+	
+	virtual TArray<FTaggedMontage> GetAttackMontages_Implementation() override;
 
 protected:
 	virtual void BeginPlay() override;

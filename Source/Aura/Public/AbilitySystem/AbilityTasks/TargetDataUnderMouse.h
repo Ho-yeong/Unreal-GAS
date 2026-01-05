@@ -28,6 +28,7 @@ public:
 private:
 	// 4. Activate Override: 실제 로직 진입점
 	virtual void Activate() override;
-
 	void SendMouseCursorData();
+	
+	void OnTargetDataReplicatedCallback(const FGameplayAbilityTargetDataHandle& DataHandle, FGameplayTag ActivationTag);
 };

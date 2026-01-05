@@ -13,7 +13,6 @@
 
 AAuraCharacter::AAuraCharacter()
 {
-
 }
 
 void AAuraCharacter::BeginPlay()
